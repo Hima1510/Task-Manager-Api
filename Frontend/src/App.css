@@ -1,0 +1,269 @@
+.page {
+  min-height: 100vh;
+  padding: 32px;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  color: #1f2937;
+  position: relative;
+}
+
+.panel {
+  width: min(1100px, 100%);
+  margin: 0 auto 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.form-panel {
+  padding: 28px;
+}
+
+.auth-panel {
+  max-width: 520px;
+}
+
+.auth-switch {
+  margin: 18px 0 0;
+  color: #6b7280;
+}
+
+.link-button {
+  padding: 0;
+  background: transparent;
+  color: #2563eb;
+}
+
+.account-bar,
+.account-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.account-actions {
+  color: #4b5563;
+}
+
+.list-panel {
+  padding: 28px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.subtitle,
+.muted {
+  color: #6b7280;
+}
+
+.task-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.task-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  background: #fff;
+  color: #111827;
+  font: inherit;
+}
+
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 16px;
+}
+
+.check {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.check input {
+  width: auto;
+}
+
+.actions,
+.card-actions,
+.task-head {
+  display: flex;
+  gap: 12px;
+}
+
+.actions,
+.card-actions {
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 16px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.error {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.toast {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  border: 1px solid transparent;
+}
+
+.toast.success {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+
+.toast.error {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.toast-close {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.task-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.task-card {
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #f9fafb;
+}
+
+.task-card.done {
+  background: #ecfdf5;
+}
+
+.task-head {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.badge.low {
+  color: #0369a1;
+}
+
+.badge.medium {
+  color: #92400e;
+}
+
+.badge.high {
+  color: #b91c1c;
+}
+
+.description {
+  margin: 10px 0 14px;
+  color: #4b5563;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 16px;
+  }
+
+  .form-panel,
+  .list-panel {
+    padding: 20px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .account-bar,
+  .account-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
